@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const result = await response.json();
 
               if (response.ok) {
+                activitySelect.innerHTML = '<option value="">-- Selecione uma atividade --</option>';
                 fetchActivities();
               } else {
                 alert(result.detail || "Failed to remove participant");
